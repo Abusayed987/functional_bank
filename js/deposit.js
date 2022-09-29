@@ -12,7 +12,7 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
 
     setValueById('blance_total', newTotalBlance)
 })
- */
+
 document.getElementById('btn-deposit').addEventListener('click',function(){
     const newInputDepositValue = getInputValueById('deposit_field');
 
@@ -26,4 +26,17 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
 
     const newTotalBlance = previousBlance + newInputDepositValue;
     setElementById('blance_total',newTotalBlance );
+})
+ */
+
+document.getElementById('btn-deposit').addEventListener('click',function(){
+    const newInputDepositValue = getInputValueById('deposit_field');
+    const previousTextElement = getTextElementById('deposit_total');
+     
+    const DepositTotalValue = newInputDepositValue + previousTextElement;
+    setElementById('deposit_total', DepositTotalValue);
+
+    const previousBlance = getTextElementById('blance_total');
+    const currentTotalBlance = previousBlance + newInputDepositValue;
+    setElementById('blance_total', currentTotalBlance)
 })

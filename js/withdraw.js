@@ -13,7 +13,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const newTotalBlance = previousBlance - newInputWithdrawFieldValue;
     setValueById('blance_total', newTotalBlance )
 })
- */
+
 document.getElementById('btn-withdraw').addEventListener('click', function(){
     const newWithdrawValue = getInputValueById('withdraw_field');
     const widthdrawElement = getElementValueById('withdraw_total') ;
@@ -23,4 +23,16 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const previousTextElement =  getElementValueById('blance_total');
     const newTotalBlance = previousTextElement - newWithdrawValue ;
     setElementById('blance_total', newTotalBlance);
+})
+ */
+document.getElementById('btn-withdraw').addEventListener('click',function(){
+    const newInputWithdrawValue = getInputValueById('withdraw_field');
+    const previousTextElement = getTextElementById('withdraw_total');
+     
+    const WithdrawTotalValue = newInputWithdrawValue + previousTextElement;
+    setElementById('withdraw_total', WithdrawTotalValue);
+
+    const previousBlance = getTextElementById('blance_total');
+    const currentTotalBlance = previousBlance -  newInputWithdrawValue  ;
+    setElementById('blance_total', currentTotalBlance)
 })

@@ -21,7 +21,7 @@ function setValueById(setElementId, newValue ) {
     const textElement = document.getElementById(setElementId);
     textElement.innerText = newValue; 
 }
-*/
+
 
 // Function for input value
 function getInputValueById(inputId) {
@@ -42,4 +42,27 @@ function getElementValueById(textElementId) {
 function setElementById(setElementId, newValue) {
     const setElementValue = document.getElementById(setElementId);
     setElementValue.innerText = newValue;
+}
+*/
+
+// function for get input value
+function getInputValueById(inputId) {
+    const inputField = document.getElementById(inputId);
+    const inputFieldString = inputField.value ;
+    const inputfieldNumber = parseFloat(inputFieldString) ;
+    inputField.value = '';
+    return inputfieldNumber;
+}
+// function for get text Element 
+function getTextElementById(textElementId) {
+    const textElement = document.getElementById(textElementId);
+    const previousTextElementString = textElement.innerText;
+    const previousTextElementNumber  =  parseFloat(previousTextElementString);
+    return previousTextElementNumber;
+}
+// function for set Element
+
+function setElementById(setElementId, newValue) {
+    const setElement = document.getElementById(setElementId)  ;
+    setElement.innerText = newValue ;
 }
