@@ -1,3 +1,4 @@
+/*
 // Get a input value in this function 
 function getInputFieldByValue(inputValueId) {
     const inputfield = document.getElementById(inputValueId);
@@ -20,4 +21,25 @@ function setValueById(setElementId, newValue ) {
     const textElement = document.getElementById(setElementId);
     textElement.innerText = newValue; 
 }
+*/
 
+// Function for input value
+function getInputValueById(inputId) {
+    const inputField = document.getElementById(inputId);
+    const newInputFieldString = inputField.value ;
+    const newInputFieldNumber = parseFloat(newInputFieldString);
+    inputField.value = '';
+    return newInputFieldNumber;
+}
+//function for text Element 
+function getElementValueById(textElementId) {
+    const textElement = document.getElementById(textElementId);
+    const textElementValueString = textElement.innerText;
+    const  textElementValueNumber = parseFloat(textElementValueString);
+    return textElementValueNumber;
+}
+// function for set element
+function setElementById(setElementId, newValue) {
+    const setElementValue = document.getElementById(setElementId);
+    setElementValue.innerText = newValue;
+}
